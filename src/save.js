@@ -2,7 +2,6 @@ import { useBlockProps, RichText } from "@wordpress/block-editor";
 
 export default function Save({
   attributes: {
-    mediaID,
     mediaURL,
     title,
     titleLevel,
@@ -12,8 +11,6 @@ export default function Save({
   },
 }) {
   const blockProps = useBlockProps.save();
-
-  console.log("save", title);
 
   return (
     <div {...blockProps}>
