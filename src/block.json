@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/advanced-image",
+  "version": "0.1.0",
+  "title": "Advanced Image",
+  "category": "text",
+  "icon": "cover-image",
+  "description": "A Gutenberg block to show your pride! This block enables you to type text and style it with the color font Gilbert from Type with Pride.",
+  "attributes": {
+    "mediaID": {
+      "type": "number"
+    },
+    "mediaURL": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "img",
+      "attribute": "src"
+    },
+    "title": {
+      "type": "string"
+    },
+    "titleLevel": {
+      "type": "string",
+      "enum": ["h1", "h2", "h3", "h4", "h5", "h6"],
+      "default": "h3"
+    },
+    "titleColor": {
+      "type": "string",
+      "default": "#000"
+    },
+    "text": {
+      "type": "string",
+      "source": "text",
+      "selector": "p"
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "advanced-image",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
